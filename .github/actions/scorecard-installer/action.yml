@@ -1,0 +1,32 @@
+name: "OpenSSF Scorecard Installer"
+description: "Agentic action to install Scorecard workflow and badge in a GitHub repo"
+author: "Trevor Bowman"
+inputs:
+  repo_url:
+    description: "URL of the target GitHub repository"
+    required: true
+  branch:
+    description: "Target branch to create the PR from"
+    default: "main"
+    required: false
+  github_token:
+    description: "GitHub token with repo and workflow scopes"
+    required: true
+  dry_run:
+    description: "If true, only simulate changes without pushing or opening a PR"
+    default: "false"
+    required: false
+  cron:
+    description: "Custom cron schedule for Scorecard workflow"
+    default: "'15 14 * * 5'"
+    required: false
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  env:
+    INPUT_REPO_URL: ${{ inputs.repo_url }}
+    INPUT_BRANCH: ${{ inputs.branch }}
+    INPUT_GITHUB_TOKEN: ${{ inputs.github_token }}
+    INPUT_DRY_RUN: ${{ inputs.dry_run }}
+    INPUT_CRON: ${{ inputs.cron }}
