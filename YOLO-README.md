@@ -11,7 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Use Scorecard Installer
--       uses: ./.github/actions/scorecard-installer
 +       uses: tbowman01/scorecard-installer-action@v1
         with:
           repo_url: https://github.com/tbowman01/scorecard-installer-action
