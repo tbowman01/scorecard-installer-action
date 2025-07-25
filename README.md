@@ -1,6 +1,6 @@
 # OpenSSF Scorecard Installer Action
 
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/YOUR_ORG/YOUR_REPO/badge)](https://securityscorecards.dev/viewer/?uri=github.com/YOUR_ORG/YOUR_REPO)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/tbowman01/scorecard-installer-action/badge)](https://securityscorecards.dev/viewer/?uri=github.com/tbowman01/scorecard-installer-action)
 
 ---
 
@@ -53,7 +53,7 @@ jobs:
 ## ✅ Example Badge Added to README
 
 ```
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/YOUR_ORG/YOUR_REPO/badge)](https://securityscorecards.dev/viewer/?uri=github.com/YOUR_ORG/YOUR_REPO)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/tbowman01/scorecard-installer-action/badge)](https://securityscorecards.dev/viewer/?uri=github.com/tbowman01/scorecard-installer-action)
 ```
 
 ---
@@ -63,6 +63,30 @@ jobs:
 ```bash
 act -j install-scorecard
 ```
+
+### 🔧 How to Install `act`
+
+If `act` is not already installed, follow these steps:
+
+**For macOS (Homebrew):**
+
+```bash
+brew install act
+```
+
+**For Linux:**
+
+```bash
+curl -s https://raw.githubusercontent.com/nektos/act/master/install.sh | sudo bash
+```
+
+**For Windows (Scoop):**
+
+```powershell
+scoop install act
+```
+
+Or download from the [releases page](https://github.com/nektos/act/releases) and place it in your system's PATH.
 
 ---
 
@@ -85,4 +109,3 @@ act -j install-scorecard
 ## 👤 Author
 
 **Trevor Bowman** — [github.com/tbowman01](https://github.com/tbowman01)
-
