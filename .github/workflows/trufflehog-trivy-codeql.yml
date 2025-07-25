@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run TruffleHog
-        uses: trufflesecurity/trufflehog@v3.74.3
+        uses: trufflesecurity/trufflehog@v3
         with:
           scan: .
           sarif: trufflehog.sarif
@@ -43,7 +43,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run Trivy FS Scan
-        uses: aquasecurity/trivy-action@0.16.1
+        uses: aquasecurity/trivy-action@0.32
         with:
           scan-type: fs
           format: sarif
