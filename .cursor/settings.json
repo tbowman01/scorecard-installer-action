@@ -1,0 +1,14 @@
+{
+  "userRules": [
+    {
+      "name": "Comprehensive Commit Messages",
+      "description": "Rules for creating detailed, structured commit messages",
+      "rule": "When asked to commit changes:\n\n1. Always include a structured commit message with:\n   - A concise subject line (<50 chars) with type prefix (feat:, fix:, docs:, etc.)\n   - A blank line separator\n   - Detailed description of changes and their security/compliance impact\n   \n2. For security-related commits, include:\n   - Which security controls or scores are affected\n   - Impact on OpenSSF Scorecard metrics\n   - Any CVEs or vulnerabilities addressed\n\n3. For workflow or action changes:\n   - Note backward compatibility concerns\n   - Document any input/output parameter changes\n   - Mention testing done across environments\n\n4. Always reference related issues/PRs using GitHub syntax (#123)\n\n5. Include examples for significant user-facing changes\n\nExamples:\n- \"feat: Add multi-repo orchestration capability\n  \n  Implements bulk installation across organization repositories using\n  GitHub's GraphQL API. Improves deployment efficiency by 70%.\n  \n  Closes #42\"\n\n- \"fix: Resolve token permission issues with workflow scopes\n  \n  Addresses insufficient permissions when creating PRs in target repos.\n  Updates documentation to clarify required token scopes.\n  \n  Fixes #56\""
+    },
+    {
+      "name": "Code Attribution",
+      "description": "Ensure all code changes include proper AI attribution",
+      "rule": "For all code changes:\n\n1. Every file edited or created must include attribution to the AI model used:\n   - For single-line changes: Add '// Co-authored-by: cursor.ai (<model used>)' at the end of the line\n   - For multi-line changes: Add '// Co-authored-by: cursor.ai (<model used>)' as a comment at the end of the edited section\n\n2. When modifying existing attributed code, preserve the original attribution and add new attribution only for newly added sections\n\n3. For different file types, use the appropriate comment syntax:\n   - JavaScript/TypeScript/C-like: // Co-authored-by: cursor.ai (<model used>)\n   - Python: # Co-authored-by: cursor.ai (<model used>)\n   - HTML/XML: <!-- Co-authored-by: cursor.ai (<model used>) -->\n   - CSS: /* Co-authored-by: cursor.ai (<model used>) */\n   - Shell: # Co-authored-by: cursor.ai (<model used>)\n   - Markdown: <!-- Co-authored-by: cursor.ai (<model used>) -->\n\n4. When making multiple changes within a file, attribute each significant code section separately\n\n5. Always replace '<model used>' with the actual model name that generated the code (e.g., Claude-3.5-Sonnet, GPT-4.1, etc.)"
+    }
+  ]
+}
