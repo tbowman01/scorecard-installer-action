@@ -1,0 +1,11 @@
+permissions:
+  contents: read
+  security-events: write
+  id-token: write
+
+jobs:
+  analysis:
+    steps:
+      - uses: ossf/scorecard-action@v2
+        with:
+          publish_results: true

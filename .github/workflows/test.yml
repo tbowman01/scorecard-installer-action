@@ -1,0 +1,18 @@
+name: Validate Scorecard Installer
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check action metadata
+        run: cat .github/actions/scorecard-installer/action.yml
+      - name: Validate Dockerfile
+        run: docker build .github/actions/scorecard-installer
