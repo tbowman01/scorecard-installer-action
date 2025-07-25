@@ -1,0 +1,9 @@
+{
+  "userRules": [
+    {
+      "name": "Comprehensive Commit Messages",
+      "description": "Rules for creating detailed, structured commit messages",
+      "rule": "When asked to commit changes:\n\n1. Always include a structured commit message with:\n   - A concise subject line (<50 chars) with type prefix (feat:, fix:, docs:, etc.)\n   - A blank line separator\n   - Detailed description of changes and their security/compliance impact\n   \n2. For security-related commits, include:\n   - Which security controls or scores are affected\n   - Impact on OpenSSF Scorecard metrics\n   - Any CVEs or vulnerabilities addressed\n\n3. For workflow or action changes:\n   - Note backward compatibility concerns\n   - Document any input/output parameter changes\n   - Mention testing done across environments\n\n4. Always reference related issues/PRs using GitHub syntax (#123)\n\n5. Include examples for significant user-facing changes\n\nExamples:\n- \"feat: Add multi-repo orchestration capability\n  \n  Implements bulk installation across organization repositories using\n  GitHub's GraphQL API. Improves deployment efficiency by 70%.\n  \n  Closes #42\"\n\n- \"fix: Resolve token permission issues with workflow scopes\n  \n  Addresses insufficient permissions when creating PRs in target repos.\n  Updates documentation to clarify required token scopes.\n  \n  Fixes #56\""
+    }
+  ]
+}
